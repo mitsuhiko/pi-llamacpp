@@ -29,9 +29,14 @@ The model names describe the architecture:
   stored and loaded.
 
 The `moe` (35B-A3B) models are downloaded from
-[`havenoammo/Qwen3.6-35B-A3B-MTP-GGUF`](https://huggingface.co/havenoammo/Qwen3.6-35B-A3B-MTP-GGUF),
-and the `dense` (27B) models are downloaded from
-[`froggeric/Qwen3.6-27B-MTP-GGUF`](https://huggingface.co/froggeric/Qwen3.6-27B-MTP-GGUF).
+[`havenoammo/Qwen3.6-35B-A3B-MTP-GGUF`](https://huggingface.co/havenoammo/Qwen3.6-35B-A3B-MTP-GGUF)
+at revision `44ce525026e7e7d0e0915dc1bf83a783c813e75a`, and the `dense`
+(27B) models are downloaded from
+[`froggeric/Qwen3.6-27B-MTP-GGUF`](https://huggingface.co/froggeric/Qwen3.6-27B-MTP-GGUF)
+at revision `431204640c8511573e61a7964a12cc452114a223`. Pinning the
+revisions keeps downloads reproducible if upstream `main` moves; set
+`LLAMACPP_QWEN_35B_A3B_REVISION`, `LLAMACPP_QWEN_27B_REVISION`, or
+`LLAMACPP_QWEN_REVISION` to override.
 These files need llama.cpp MTP/NextN support, so the default runtime path builds
 a pinned snapshot of [llama.cpp pull request #22673](https://github.com/ggml-org/llama.cpp/pull/22673)
 instead of using the stock binary release.

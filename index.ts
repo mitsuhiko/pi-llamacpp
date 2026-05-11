@@ -56,9 +56,12 @@ const PROVIDER_BASE_URL = LLAMACPP_PORT ? apiBaseUrlForPort(LLAMACPP_PORT) : api
 const API_KEY = process.env.LLAMACPP_API_KEY ?? "llamacpp-local";
 
 const QWEN_35B_A3B_REPO = process.env.LLAMACPP_QWEN_35B_A3B_REPO ?? process.env.LLAMACPP_QWEN_REPO ?? "havenoammo/Qwen3.6-35B-A3B-MTP-GGUF";
-const QWEN_35B_A3B_REVISION = process.env.LLAMACPP_QWEN_35B_A3B_REVISION ?? process.env.LLAMACPP_QWEN_REVISION ?? "main";
+const QWEN_35B_A3B_REVISION =
+	process.env.LLAMACPP_QWEN_35B_A3B_REVISION ??
+	process.env.LLAMACPP_QWEN_REVISION ??
+	"44ce525026e7e7d0e0915dc1bf83a783c813e75a";
 const QWEN_27B_REPO = process.env.LLAMACPP_QWEN_27B_REPO ?? "froggeric/Qwen3.6-27B-MTP-GGUF";
-const QWEN_27B_REVISION = process.env.LLAMACPP_QWEN_27B_REVISION ?? "main";
+const QWEN_27B_REVISION = process.env.LLAMACPP_QWEN_27B_REVISION ?? "431204640c8511573e61a7964a12cc452114a223";
 const DEFAULT_CTX_SIZE = Number(process.env.LLAMACPP_CTX_SIZE ?? 262144);
 const DEFAULT_MAX_TOKENS = Number(process.env.LLAMACPP_MAX_TOKENS ?? 65536);
 
